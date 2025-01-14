@@ -1,0 +1,461 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    /* change black/bronze 195 et 255 prim->acnt */
+    --noir : rgb(15, 15, 15);
+    --prim : var(--noir);
+    --bcgd : #ccc;
+    --blnc : ghostwhite;
+    --acnt : rgb(153, 100, 20);
+    /* --noir : #151515;
+    --prim : #0099cc;
+    --bcgd : #ccc;
+    --blnc : ghostwhite;
+    --acnt : #206285; */
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat";
+}
+
+body {
+    background-color: var(--bcgd);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: var(--noir);
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    /* min-height: 1000px; */
+    min-height: 100vh;
+    background: var(--blnc);
+    margin: 50px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 15px 55px rgba(0,0,0,0.1);
+}
+
+.container .left_side {
+    position: relative;
+    background: var(--prim);
+    padding: 30px;
+}
+
+.profileText {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom:  1px solid rgba(255,255,255,0.2);
+}
+
+.profileText .imgBx {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profileText .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profileText h2 {
+    /* display: none; */
+    color: var(--blnc);
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4em;
+}
+
+.profileText h2 span {
+    font-size: 0.8em;
+    font-weight: 300;
+}
+
+.contactInfo {
+    padding: 40px 0 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.contactInfo:last-child {
+    /* padding: 40px 0 20px; */
+    border-bottom: none;
+}
+
+
+.contactInfo ul {
+    position: relative;
+}
+
+.contactInfo ul li {
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.contactInfo ul li .icon {
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color: var(--acnt);
+}
+
+.contactInfo ul li .text {
+    color: var(--blnc);
+    font-weight: 300;
+}
+
+.contactInfo.education li {
+    margin-bottom: 15px;
+}
+
+.contactInfo.education h5 {
+    color: var(--blnc);
+    font-weight: 500;
+}
+
+.contactInfo.education h4:nth-child(2) {
+    color: var(--blnc);
+    font-weight: 500;
+}
+
+.contactInfo.education h4 {
+    color: var(--blnc);
+    font-weight: 300;
+}
+
+.contactInfo.language .percent {
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background: var(--bcgd);
+    display: block;
+    margin-top: 5px;
+    border-radius: 3px;
+}
+
+.contactInfo.language .percent div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    /* background: #133a50; */
+    background: var(--acnt);
+    border-radius: 3px;
+}
+
+.contactInfo.qualite ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.title {
+    color:var(--blnc);
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+/* ////////////////////////////////////////////// */
+
+.container .right_side {
+    position: relative;
+    background: var(--blnc);
+    padding: 30px;
+}
+
+.about {
+    margin-bottom: 30px;
+}
+
+.about:last-child {
+    margin-bottom: 0;
+}
+
+/*Presentation a droite*/
+.about h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 50px;
+    /* color: var(--prim); */
+    color: var(--acnt);
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.about h1 span {
+    font-weight: 300;
+}
+
+.about h2:not(.title2) {
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--noir);
+    font-weight: 300;
+}
+/* Fin de présentation */
+.about
+
+.title2 {
+    color: var(--noir);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    background: #ddd;
+    padding: 5px;
+    margin-right: -30px;
+}
+
+p {
+    color: var(--noir);
+    margin-bottom: 10px;
+    /* line-height: 1.4em; */
+}
+
+.about .box {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 5px 10px 0;
+}
+
+.about .box .year_company {
+    min-width: 150px;
+}
+
+.about .box .year_company h5 {
+    text-transform: uppercase;
+    color: var(--noir);
+    font-weight: 600;
+}
+
+.about .box .text h3 {
+    text-transform: uppercase;
+    font-size: 18px;
+    color: var(--noir);
+}
+
+.about .box .text h4 {
+    text-transform: uppercase;
+    color:var(--acnt);
+    /* color:var(--prim); */
+    font-size: 16px;
+}
+
+.skillbox {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.skills .box {
+    position: relative;
+    width: 100%;
+    display: grid;
+    /* grid-template-columns: 150px 1frpx; */
+    grid-template-columns: 200px 200px;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills .box h4 {
+    text-transform: uppercase;
+    color: var(--noir);
+    font-weight: 500;
+    text-align: end;
+    margin-right: 10px;
+}
+
+.skills .box .percent {
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background:var(--bcgd);
+    border-radius: 5px;
+}
+
+.skills .box .percent div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: var(--acnt);
+    border-radius: 5px;
+}
+
+.interest ul {
+    display: grid;
+    /* grid-template-columns: repeat(4, 1fr); */
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.interest ul li {
+    list-style: none;
+    color: var(--noir);
+    font-weight: 500;
+    margin: 10px 0;
+    /*interet a gauche*/
+    display: flex;
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.interest ul li .fa-solid {
+    color: var(--acnt);
+    /* font-size: 18px; */
+    font-size: 30px;
+    width: 30px;
+    margin-right: 20px;
+}
+
+/*interet a gauche*/
+.interest ul li .text {
+    margin-left: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+    .container {
+        margin: 10px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .interest ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .about .box {
+        flex-direction: column;
+    }
+
+    .about .box .year_company {
+        margin-bottom: 5px;
+    }
+    
+    .interest ul {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .skills .box {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* //////////////////////////////////// */
+
+.competence ul li,
+.language ul li {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+}
+
+@media print {
+
+    .container {
+        margin: 0;
+        grid-template-columns: 250px 1fr;
+    }
+
+    /* .about h1 {
+        display: none;
+        font-size: 40px;
+    } */
+
+    .interest ul li .fa-solid {
+        font-size: 24px;
+    }
+
+    /* .about h2:not(.title2){
+        display: none;
+    } */
+    .about:first-child p {
+        font-size: 16px;
+        width: 100%;
+        text-align: justify;
+        
+    }
+
+    .about h2.title2 {
+        font-size: 18px;
+    }
+
+    .about .box .text p {
+        font-size: 16px;
+    }
+
+    .title {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    /* .about .box .text h3, */
+    .contactInfo.education h4:nth-child(2),
+    .contactInfo ul li .icon {
+        font-size: 14px;
+    }
+
+    
+    /* .about .box .text h4, */
+    .contactInfo ul li .text,
+    .contactInfo.education h4,
+    .contactInfo.education h5,
+    .contactInfo ul li .text {
+        font-size: 12px;
+    }
+
+    /* .contactInfo {
+        padding-top: 20px;
+    } */
+
+    .profileText h2 {
+        display: none;
+        line-height: 1em;
+        margin-top: 5px;
+    }
+    
+    .about .box .year_company h5,p,
+    .profileText h2 span {
+        font-size: 12px;
+    }
+
+    /* .profileText .imgBx {
+        width: 150px;
+        height: 150px;
+    } */
+
+    .about .box .year_company {
+        min-width: 100px;
+        font-size: 12px;
+    }
+
+    .about .box {
+        margin: 10px 10px;
+    }
+
+    .interest ul {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+}
